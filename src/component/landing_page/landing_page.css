@@ -1,0 +1,236 @@
+.landing-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(120, 255, 214, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 195, 113, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+.content-wrapper {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    z-index: 1;
+}
+.logo-section {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeInDown 1s ease;
+}
+
+.tea-icon {
+    display: inline-block;
+    color: #78ffd6;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.main-title {
+    font-size: 64px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #78ffd6 0%, #a8edea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+.hero-section {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.description {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.cta-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 80px;
+    animation: fadeInUp 1s ease 0.4s both;
+}
+.cta-btn {
+    padding: 16px 48px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.cta-btn:hover::before {
+    left: 100%;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #78ffd6 0%, #a8edea 100%);
+    color: #0f2027;
+}
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(120, 255, 214, 0.4);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid #78ffd6;
+}
+
+.secondary-btn:hover {
+    background: rgba(120, 255, 214, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(120, 255, 214, 0.2);
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.cta-btn:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    animation: fadeInUp 1s ease 0.6s both;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    color: #78ffd6;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+@keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+@media (max-width: 768px) {
+    .main-title {
+      font-size: 42px;
+    }
+
+    .tagline {
+      font-size: 16px;
+    }
+
+    .description {
+      font-size: 16px;
+    }
+
+    .cta-section {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .cta-btn {
+      justify-content: center;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.feature-icon img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
