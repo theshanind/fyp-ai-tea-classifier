@@ -7,7 +7,7 @@ const LandingPage = () => {
     return (
         <div className="landing-container">
             <div className="background-overlay"></div>
-            <div className="content-wrapper">
+            <div className="landing-content-wrapper">
                 <div className="logo-section">
                     <div className="tea-icon">
                         <svg viewBox="0 0 64 64" width="80" height="80">
