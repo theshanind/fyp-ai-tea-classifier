@@ -4,7 +4,7 @@ const LoginPage = () => {
     return (
         <div className="login-container">
             <div className="background-overlay"></div>
-            <div className="content-wrapper">
+            <div className="login-content-wrapper">
                 <div className="login-box">
                     <div className="back-home">
                         <button className="back-btn">
