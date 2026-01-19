@@ -18,7 +18,7 @@
       radial-gradient(circle at 80% 80%, rgba(255, 195, 113, 0.1) 0%, transparent 50%);
     pointer-events: none;
 }
-.login-content-wrapper {
+.content-wrapper {
     position: relative;
     max-width: 1200px;
     width: 100%;
